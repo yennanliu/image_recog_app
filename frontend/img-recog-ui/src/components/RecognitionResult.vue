@@ -1,6 +1,5 @@
 <template>
   <div class="results-container" v-if="predictions.length">
-    <h3>Recognition Results</h3>
     <div class="results-list">
       <div v-for="(prediction, index) in predictions" :key="index" class="result-item">
         <span class="label">{{ prediction.label }}</span>
@@ -31,23 +30,13 @@ export default {
 <style scoped>
 .results-container {
   width: 100%;
-  max-width: 500px;
-  margin: 20px auto;
-  padding: 20px;
-  background: #f5f5f5;
-  border-radius: 8px;
-}
-
-h3 {
-  margin-top: 0;
-  color: #333;
-  text-align: center;
+  margin: 0 auto;
 }
 
 .results-list {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
 }
 
 .result-item {
@@ -58,15 +47,16 @@ h3 {
 
 .label {
   min-width: 100px;
-  font-weight: bold;
+  font-weight: 600;
   color: #333;
+  font-size: 0.9em;
 }
 
 .confidence-bar {
   flex-grow: 1;
-  height: 24px;
+  height: 20px;
   background: #e0e0e0;
-  border-radius: 12px;
+  border-radius: 10px;
   position: relative;
   overflow: hidden;
 }
@@ -79,11 +69,11 @@ h3 {
 
 .confidence-text {
   position: absolute;
-  right: 10px;
+  right: 8px;
   top: 50%;
   transform: translateY(-50%);
   color: #333;
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 0.8em;
+  font-weight: 600;
 }
 </style> 

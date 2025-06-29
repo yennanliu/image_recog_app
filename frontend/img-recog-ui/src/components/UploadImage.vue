@@ -65,7 +65,7 @@ export default {
       if (!this.imageFile) return
       
       this.isProcessing = true
-      // Emit event to parent component
+      // Emit event to parent component with the file
       this.$emit('recognize', this.imageFile)
     },
     reset() {
